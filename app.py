@@ -107,6 +107,7 @@ with tab2:
     )
     st.plotly_chart(fig)
 
+# Display raw data in tabular form
 with tab3:
     st.subheader("Raw Data")
     st.dataframe(df)
