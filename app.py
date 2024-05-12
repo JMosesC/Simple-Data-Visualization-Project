@@ -6,6 +6,7 @@ import plotly.express as px
 import plotly.graph_objects as go
 from utils import get_data, bin_df, get_tags, filter_tag
 
+st.set_page_config(page_title="Steam Game Statistics")
 df = get_data()
 tags = get_tags(df)
 st.header("Steam Game Statistics")
