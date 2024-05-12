@@ -2,8 +2,3 @@
 base="dark"
 primaryColor="#3595ff"
 secondaryBackgroundColor="#374c71"
-
-[theme]
-base="light"
-primaryColor="#3595ff"
-secondaryBackgroundColor="#d4e6fd"
