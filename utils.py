@@ -6,7 +6,8 @@ def clean_df(df):
     """
     From a Dataframe, drop:
         1. Empty rows
-        3. Non-game data
+        2. Products not supported on any system (Non-game products)
+    Dataset has no duplicate entries.
     """
     df = df.dropna()
     filtered_df = df.query("win or mac or linux")
@@ -35,6 +36,10 @@ def get_data():
 
 @st.cache_data
 def filter_tag(df, tags):
+    """
+    From the dataset, retrieve only rows where all product tags listed
+    in the 'tags' argument can be found in an individual product's list of tags.
+    """
     if not tags:
         filtered = df
     else:
@@ -44,10 +49,17 @@ def filter_tag(df, tags):
 
 @st.cache_data
 def bin_df(df, bins, labels):
+    """
+    Converts continuous data into categorical data by assigning
+    values to bins, depending on which range of values they belong to.
+    """
     binned = pd.cut(df, bins=bins, labels=labels)
     return binned
 
 @st.cache_data
 def get_tags(df):
+    """
+    Retrives list of all unique tags from all products in the dataset.
+    """
     tags = list(df['tags'].explode().unique())
     return tags
