@@ -1,3 +1,3 @@
-A simple data visualization project made with Python. <br>
-Visualizes data from the Game Recommendations on Steam dataset on Kaggle. <br>
+A simple data visualization project made with Python. Visualizes data from the Game Recommendations on Steam dataset on Kaggle. <br><br>
+
 Dataset: https://www.kaggle.com/datasets/antonkozyriev/game-recommendations-on-steam?
